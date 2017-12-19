@@ -70,13 +70,13 @@
  Classes
 
  'board'		References the main game board.
- 
+
  'heading'		
- 
+
  'senses'		
- 
+
  'sensed'		
- 
+
  'title'		
 
  'window'		References elements that make up the main
