@@ -1,0 +1,99 @@
+----------- ----------- ----------- ----------- -----------
+                         OBSHAGCE
+
+    The Official Blueberry Soft Hypermedia Adventure Game
+                    Construction Engine
+----------- ----------- ----------- ----------- -----------
+ Hi!
+ 
+ This is a little framework / template thing I'm working on
+ for building hypermedia adventure games--simple
+ collections of HTML and CSS and whatever media you want to
+ stick in there.
+ 
+ I've tried to keep things easy to understand, so avoided
+ Javascript and any ideas about trying to keep it as one
+ page (EVIL). The only thing that's kinda dynamic (?) is
+ the status window, which is a frame. Otherwise each board
+ is it's own HTML page with some inline CSS. There's a
+ general (base.css) style sheet too.
+ 
+ I hope this will encourage people to make more cool,
+ personal websites. And explore the possabilites of a
+ JS-free WWW.
+ 
+----------- ----------- ----------- ----------- -----------
+                           Goals
+----------- ----------- ----------- ----------- -----------
+
+ - Easy to read markup (with comments).
+ - Be a useful earning tool for HTML and CSS.
+ - No Java Script
+   (but feel free to fork if you're into that).
+ - Help show games can use simple technologies.
+ - Promote cool, simple hypermedia.
+
+----------- ----------- ----------- ----------- -----------
+                     Project structure
+----------- ----------- ----------- ----------- -----------
+ 
+ /
+ ├─ boards/
+ │  ├── ...
+ │  └── ...
+ ├─ images/
+ │  ├── ...
+ │  └── ...
+ ├─ messages/
+ │  ├── ...
+ │  └── ...
+ ├─ sounds/
+ │  ├── ...
+ │  └── ...
+ ├─ base.css
+ ├─ index.html
+ └─ readme
+ 
+----------- ----------- ----------- ----------- -----------
+                     Style Sheet Stuffs
+----------- ----------- ----------- ----------- -----------
+
+ Trying to explain the purpose / use of the IDs and
+ classes used.
+
+ IDs
+ 
+ 'splashimage'	For title screen images.
+ 
+ 'windows'		
+
+ Classes
+
+ 'board'		References the main game board.
+ 
+ 'heading'		
+ 
+ 'senses'		
+ 
+ 'sensed'		
+ 
+ 'title'		
+
+ 'window'		References elements that make up the main
+ 				three windows, but exludes their contents.
+
+ Also included at the end of 'base.css' are some clases you
+ can apply for graphic effects. For example alignment and
+ rotation.
+ 
+ 'align_*'		For easily alligning things in cells.
+ 
+ 'empty'		To make a cell as empty. It removes the
+ 				border, so if used in the main game board
+				the cell will not be indented.
+ 
+ 'no_scale'		For images you don't want to scale to fill
+				a cell.
+ 
+ 'rotate_*'		For rotating elements, in 90 degree
+				increments.
