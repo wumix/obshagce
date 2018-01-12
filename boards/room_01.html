@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-au">
+	<head>
+		<title>EXAMPLE GAME - ROOM 001</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Blueberry Soft">
+		<base target="message_frame">
+		<link rel="stylesheet" type="text/css" href="../base.css">
+		<style>
+			a {
+				color:white						/*	Hyperlink colour */
+			}
+			body {
+				background-color:lightgray;		/*	main bg colour */
+				background-image:url("../images/background.jpg");
+				color:blue;					/*	main text colour */
+			}
+			iframe {
+				border:1px inset lightgray;		/*	message border style */
+			}
+			td {
+				background-color:lightgray;		/*	panel background colour */
+				border:2px outset lightgray;	/*	panel border style */
+			}
+			#board td {
+				background-color:lightgray;		/*	board cells bg colour */
+				background-image:url("../images/floor.gif");
+				border:1px inset lightgray;		/*	board cells border style */
+			}
+		</style>
+	</head>
+	<body>
+		<table id="windows">
+			<tr>
+				<td id="person" class="window">
+					<table>
+						<tr>
+							<td class="window" class="heading">
+								<h2>perception</h2>
+							</td>
+						</tr>
+					</table>
+	<!--	PERCEPTIONS	-->
+					<table id="sense">
+						<tr>
+							<td class="senses"><img src="../images/eye_01.gif"></td>
+							<td class="senses"><img src="../images/nose_01.gif"></td>
+							<td class="senses"><img src="../images/ear_01.gif"></td>
+							<td class="senses"><img src="../images/tongue_01.gif"></td>
+							<td class="senses"><img src="../images/hand_01.gif"></td>
+						</tr>
+	<!--	PERCEPTIONS	- DESCRIPTIONS	-->
+						<tr>
+							<td class="sensed">MOUSE,<br>EXIT</td>
+							<td class="sensed">MUSK, OFFAL</td>
+							<td class="sensed">CHURNING</td>
+							<td class="sensed">WET</td>
+							<td class="sensed">. . .</td>
+						</tr>
+					</table>
+				</td>
+				<td class="window" rowspan="2">
+					<table class="title">
+						<tr>
+							<td class="window"  class="heading">
+								<h1>example game</h1>
+							</td>
+						</tr>
+					</table>
+	<!--	GAME BOARD	-->
+					<table id="board">
+						<tr>
+							<td><img src="../images/wall.jpg"></td>
+							<td><img src="../images/wall.jpg"></td>
+							<td><img src="../images/wall.jpg"></td>
+							<td><img src="../images/wall.jpg"></td>
+							<td><img src="../images/wall.jpg"></td>
+						</tr>
+						<tr>
+							<td><img src="../images/wall.jpg"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td><img src="../images/wall.jpg"></td>
+						</tr>
+						<tr>
+							<td><img src="../images/wall.jpg"></td>
+							<td></td>
+							<td></td>
+							<td><a href="../messages/room_001_skates.html"><img src="../images/skates.png"></td>
+							<td><img src="../images/wall.jpg"></td>
+						</tr>
+						<tr>
+							<td><img src="../images/wall.jpg"></td>
+							<td class="align_right"><a target="message_frame" href="../messages/room_001_mouse.txt">Ҩ ̡⁐̤ᕐᐷ</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><img src="../images/wall.jpg"></td>
+							<td><img src="../images/wall.jpg"></td>
+							<td><img src="../images/wall.jpg"></td>
+							<td><img src="../images/wall.jpg"></td>
+							<td><img src="../images/wall.jpg"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td id="message" class="window">
+					<table>
+						<tr>
+							<td class="window" class="heading">
+								<h2>message</h2>
+							</td>
+							<td class="window">
+								<a target="message_frame" href="../messages/room_001.txt">&#8632;</a>
+							</td>
+						</tr>
+					</table>
+					<iframe name="message_frame" src="../messages/room_001.txt"></iframe>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
