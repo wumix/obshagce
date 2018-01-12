@@ -1,0 +1,98 @@
+h1 {
+	font-size:1em;
+	font-style:italic;
+	margin: 0 1em;
+	text-align:center;
+	text-transform:uppercase;
+}
+
+h2 {
+	font-size:1em;
+	margin: 0 1em;
+	text-transform:uppercase;
+}
+
+iframe {
+	height:15em;
+	margin:2px;
+	width:31em;
+}
+
+img {
+	height:100%;	/*	resize to fill their container	*/
+	width:100%;		/*	resize to fill their container	*/
+	vertical-align: bottom;
+}
+
+table #windows {
+	border-spacing:0.5em;
+}
+
+td {
+	vertical-align:top;	/*	doing this removes space under images	*/
+}
+
+td:not(.window) {
+	height:6em;
+	padding:0;
+	width:6em;
+}
+
+td .window, .heading {
+	border-style:groove;
+}
+
+td .senses {
+	border:1px outset lightgray;
+}
+
+td .sensed {
+	border:1px inset lightgray;
+	color:black;
+}
+
+#splashimage {
+	text-align:center;
+}
+
+.title {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*	Some generic manipulation classes
+
+	Use these to easily rotate, flip, etc., images
+*/
+
+/*	Rotate elements. Mostly for 'tiles'?	*/
+.rotate_90 {transform:rotate(90deg);}
+.rotate_180 {transform:rotate(180deg);}
+.rotate_270 {transform:rotate(270deg);}
+
+/*	Flip image	*/
+.flip_h {transform: scaleX(-1);}
+.flip_v {transform: scaleY(-1);}
+
+/*	Round images	*/
+.shape_circle {border-radius:50%;}
+
+/*	Align elements.	*/
+.align_top {text-align:top;}
+.align_right {text-align:right;}
+.align_bottom {text-align:bottom;}
+.align_left {text-align:left;}
+.align_hcenter {text-align:center;}
+.align_vcenter {}
+
+/*	Keep image's original size	*/
+.no_scale {
+	height:auto;
+	width:auto;
+}
+
+/*	Undoes indentation on board cell	*/
+.empty {
+	background-image:none!important;
+	border:none!important;
+}
