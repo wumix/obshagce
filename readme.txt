@@ -91,45 +91,45 @@
 ----------- ----------- ----------- ----------- -----------
  Classes:
 
- 'board'		References the main game board.
+ 'board'        References the main game board.
 
  'heading'
 
- 'senses'		The
+ 'senses'       The
 
  'sensed'
 
  'title'
 
- 'window'		References elements that make up the main
- 				three windows, but exludes their contents.
+ 'window'       References elements that make up the main
+                three windows, but exludes their contents.
 
  Also included at the end of 'base.css' are some clases you
  can apply for graphic effects. For example alignment and
  rotation.
 
- 'align_*'		For easily alligning things in cells.
+ 'align_*'      For easily alligning things in cells.
 
- 'empty'		To make a cell as empty. It removes the
- 				border, so if used in the main game board
-				the cell will not be indented.
+ 'empty'        To make a cell as empty. It removes the
+                border, so if used in the main game board
+                the cell will not be indented.
 
- 'no_scale'		For images you don't want to scale to fill
-				a cell.
+ 'no_scale'     For images you don't want to scale to fill
+                a cell.
 
- 'rotate_*'		For rotating elements, in 90 degree
-				increments.
+ 'rotate_*'     For rotating elements, in 90 degree
+                increments.
 
 ----------- ----------- ----------- ----------- -----------
  HTML
 
  <base target="message_frame">
-				This makes links open thing in the message
-				window unless told otherwise. Other targets
-				you might find useful are
-	_self		to open in the same window, and
-	_blank		to open in a new tab or window depending
-				on how the person's browser is set-up.
+                This makes links open thing in the message
+                window unless told otherwise. Other targets
+                you might find useful are
+    _self       to open in the same window, and
+    _blank      to open in a new tab or window depending
+                on how the person's browser is set-up.
 
 ----------- ----------- ----------- ----------- -----------
 ----------- ----------- ----------- ----------- -----------
