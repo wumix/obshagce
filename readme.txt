@@ -84,22 +84,29 @@
 ----------- ----------- ----------- ----------- -----------
  IDs:
 
- 'splashimage'	For title screen images.
+ 'splashimage'  For title screen images. You may or may
+                not want the border.
 
- 'windows'
+ 'windows'      Contains all the game windows
+
+ 'message'      The window where messages appear
+
+ 'person'       The window containing sense information
 
 ----------- ----------- ----------- ----------- -----------
  Classes:
 
  'board'        References the main game board.
 
- 'heading'
+ 'heading'      Headings for all the windows
 
- 'senses'       The
+ 'senses'       The cells that contain the sense icons
 
- 'sensed'
+ 'sensed'       The cells that contain the sense
+                descriptions
 
- 'title'
+ 'title'        Title above game board. Game title or
+                board title or ???
 
  'window'       References elements that make up the main
                 three windows, but exludes their contents.
@@ -120,6 +127,11 @@
  'rotate_*'     For rotating elements, in 90 degree
                 increments.
 
+ 'flip_*'       Flips the element on the vertical or
+                horizonal axis.
+
+ 'shape_*'      Changes elements shape.
+
  And some classes for animated effects :)
 
  'blink'        Replicates the old <blink> tag. You can
@@ -130,6 +142,10 @@
                 enough to change. If you want to add more
                 you'll need to add more steps (the numbers
                 with the percent signs).
+
+ 'flipanim_*'   Repeatedly flips an element (like an image)
+                for a simple animation effect. Like a
+                downwards walking animation in an NES RPG.
 
 ----------- ----------- ----------- ----------- -----------
  HTML
