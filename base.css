@@ -129,13 +129,13 @@ td .sensed {
 
 /*	Flip
 	Simple animation by flipping image	*/
-.flip {
+.flipanim_h {
 	transform:scaleX(+1);
-	animation-name:flip;
+	animation-name:flipanim_h;
 	animation-duration: 0.8s;
 	animation-timing-function:step-start;
 	animation-iteration-count:infinite;
 }
-@keyframes flip {
+@keyframes flipanim_h {
 	50% { transform:scaleX(-1); }
 }
