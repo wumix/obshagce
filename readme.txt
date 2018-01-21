@@ -120,6 +120,17 @@
  'rotate_*'     For rotating elements, in 90 degree
                 increments.
 
+ And some classes for animated effects :)
+
+ 'blink'        Replicates the old <blink> tag. You can
+                easily set the speed to your liking.
+
+ 'cycle'        A colour-cycling effect. Quickly cycles
+                through a set of colours. Colours are easy
+                enough to change. If you want to add more
+                you'll need to add more steps (the numbers
+                with the percent signs).
+
 ----------- ----------- ----------- ----------- -----------
  HTML
 
