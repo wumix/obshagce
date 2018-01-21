@@ -110,7 +110,6 @@ td .sensed {
 }
 
 /*	Colour cycle
-
 	Might add different flavours later?
 */
 .cycle{
@@ -126,4 +125,17 @@ td .sensed {
 	60%		{ color:#ffff55; }
 	80%		{ color:#0000aa; }
 	100%	{ color:#aa0000; }
+}
+
+/*	Flip
+	Simple animation by flipping image	*/
+.flip {
+	transform:scaleX(+1);
+	animation-name:flip;
+	animation-duration: 0.8s;
+	animation-timing-function:step-start;
+	animation-iteration-count:infinite;
+}
+@keyframes flip {
+	50% { transform:scaleX(-1); }
 }
