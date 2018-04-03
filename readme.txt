@@ -33,7 +33,7 @@
                            Goals
 ----------- ----------- ----------- ----------- -----------
 
- - Easy to read markup (with comments).
+ - Easy to read markup (semantic, and with comments).
  - Be a useful earning tool for HTML and CSS.
  - No Java Script
    (but feel free to fork if you're into that).
@@ -68,7 +68,7 @@
  You make a title/intro screen in index.html
  This points to HTML files in 'boards'
  These files have graphics and text and things you can
- click on in the cells on the right (what I call the board)
+ click on in the cells on the right (what I call the map)
  and these open text, or HTML, or sounds, or whatever in
  the message widow in the lower left.
  You can also add some stuff to describe what is 'seen',
@@ -81,32 +81,74 @@
  Trying to explain the purpose / use of the IDs and
  classes used.
 
+ Most of the CSS is in base.css, but some is kept in the
+ HTML files so you can easily tweak things per-board, the
+ colours, for example.
+
+----------- ----------- ----------- ----------- -----------
+
+ Here's a diagram to show which section IDs and classes
+ are effecting on the board pages.
+
+ # signifies an ID
+ . signifies a class
+
+ ┌───────────────────────────────────────────────────────┐
+ │                        #board                         │
+ │                                                       │
+ │ ┌────────────────────────┐ ┌────────────────────────┐ │
+ │ │  #perception .window   │ │     #view .window      │ │
+ │ │                        │ │                        │ │
+ │ │┌──────────────────────┐│ │┌──────────────────────┐│ │
+ │ ││        #senses       ││ ││         #map         ││ │
+ │ ││                      ││ ││                      ││ │
+ │ ││┌───┬───┬───┬───┬───┐ ││ ││┌───┬───┬───┬───┬───┐ ││ │
+ │ │││   │   .icon   │   │ ││ │││   │   │   │   │   │ ││ │
+ │ ││├───┼───┼───┼───┼───┤ ││ ││├───┼───┼───┼───┼───┤ ││ │
+ │ │││   .description    │ ││ │││   │   │   │   │   │ ││ │
+ │ ││└───┴───┴───┴───┴───┘ ││ ││├───┼───┼───┼───┼───┤ ││ │
+ │ │└──────────────────────┘│ │││   │   .cell   │   │ ││ │
+ │ └────────────────────────┘ ││├───┼───┼───┼───┼───┤ ││ │
+ │ ┌────────────────────────┐ │││   │   │   │   │   │ ││ │
+ │ │    #message .window    │ ││├───┼───┼───┼───┼───┤ ││ │
+ │ │                        │ │││   │   │   │   │   │ ││ │
+ │ │                        │ ││└───┴───┴───┴───┴───┘ ││ │
+ │ │                        │ │└──────────────────────┘│ │
+ │ └────────────────────────┘ └────────────────────────┘ │
+ └───────────────────────────────────────────────────────┘
 ----------- ----------- ----------- ----------- -----------
  IDs:
 
- 'splashimage'  For title screen images. You may or may
+ 'board'        For all elements on the game boards.
+ 'titlescreen'  For all elements on the titlescreen.
+
+ 'view'         The window containing the map.
+ 'map'          The actual map grid.
+
+ 'perception'   The window containing sense information.
+ 'senses'       The grid containing the icons and
+                descriptions for the senses.
+
+ 'message'      The window where messages appear.
+
+ 'credit'       For credits on the titlescreen.
+ 'notes'        For the notes section on the titlescreen.
+ 'splash'       For titlescreen images. You may or may
                 not want the border.
-
- 'windows'      Contains all the game windows
-
- 'message'      The window where messages appear
-
- 'person'       The window containing sense information
 
 ----------- ----------- ----------- ----------- -----------
  Classes:
 
- 'board'        References the main game board.
+ 'cell'         The individual cells that contain map
+                content.
 
- 'heading'      Headings for all the windows
+ 'icon'         The cells that contain the sense icons.
 
- 'senses'       The cells that contain the sense icons
-
- 'sensed'       The cells that contain the sense
-                descriptions
+ 'description'  The cells that contain the sense
+                descriptions.
 
  'title'        Title above game board. Game title or
-                board title or ???
+                board title or ???.
 
  'window'       References elements that make up the main
                 three windows, but exludes their contents.
@@ -130,7 +172,7 @@
  'flip_*'       Flips the element on the vertical or
                 horizonal axis.
 
- 'shape_*'      Changes elements shape.
+ 'shape_*'      Changes elements' shape.
 
  And some classes for animated effects :)
 

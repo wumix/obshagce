@@ -1,62 +1,169 @@
-h1, h2 {
-	font-size:1em;
-	font-style:italic;
-	margin: 0 1em;
-	text-align:center;
-	text-transform:uppercase;
+/*
+	General styles
+
+	some practically general ones will be in the
+	Board styling section
+
+*/
+
+abbr {
+	cursor:help;
 }
 
-iframe {
-	height:15em;
-	margin:2px;
-	width:31em;
+body {
+	margin:0;
+	padding:1em;
 }
 
 img {
 	height:100%;	/*	resize to fill their container	*/
 	width:100%;		/*	resize to fill their container	*/
-	vertical-align: bottom;
+	vertical-align:bottom;
 }
 
-table #windows {
-	border-spacing:0.5em;
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+	Board styling
+
+	See readme.txt for a layout diagram
+	with IDs and classes labeled
+ */
+
+main#board {
+	display:grid;
+	grid-gap:2px;
+	grid-template-columns:32em 32em;
+	grid-template-rows:auto;
+	grid-template-areas:
+		"perp 	view"
+		"msg	view";
+}
+main#board section.window {
+	background-color:lightgray;
+	border:2px outset lightgrey;
+	padding:2px;
 }
 
-td {
-	vertical-align:top;	/*	doing this removes space under images	*/
+main#board h1,
+main#board h2 {
+	border:2px groove lightgray;
+	display:inline-block;
+	font-size:1em;
+	margin:0;
+	margin-bottom:2px;
+	padding:0 1em;
+	text-transform:uppercase;
 }
+main#board h1 {
+	text-align:center;
+}
+main#board h2 {}
 
-td:not(.window) {
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+*/
+
+main#board section#view {
+	grid-area:view;
+	text-align:center;
+}
+main#board section#view section#map {
+	display:grid;
+	grid-gap:2px;
+	grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows:1fr 1fr 1fr 1fr 1fr;
+}
+main#board section#view section#map section.cell {
+	background-size:6em 6em;
+	border:1px inset lightgray;
 	height:6em;
 	padding:0;
 	width:6em;
 }
 
-td .window, .heading {
-	border-style:groove;
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+*/
+
+main#board section#perception {
+	grid-area:perp;
+}
+main#board section#perception section#senses {
+	display:grid;
+	grid-gap:2px;
+	grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows:1fr 1fr;
 }
 
-td .senses {
+main#board section#perception section#senses section.icon {
 	border:1px outset lightgray;
 }
 
-td .sensed {
+main#board section#perception section#senses section.description {
 	border:1px inset lightgray;
 	color:black;
 }
 
-#splashimage {
-	border:0;	/*	Removes border from cell	*/
-	padding:1em;
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+*/
+
+main#board section#message {
+	grid-area:msg;
+}
+main#board iframe {
+	border:1px inset lightgray;
+	height:15em;
+	margin:0;
+	padding:0;
+	width:31.4em;
+}
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+	Title screen styling
+*/
+
+main#titlescreen {
+	margin:0;
+	padding:0;
+	width:32em;
+}
+
+main#titlescreen h1,
+main#titlescreen h2 {
+	font-size:1em;
+	margin:0 1em;
+	text-align:center;
+	text-transform:uppercase;
+}
+main#titlescreen h1 {
+	font-style:italic;
+}
+main#titlescreen h2 {}
+main#titlescreen h3 {
+	margin:0;
+}
+
+main#titlescreen header,
+main#titlescreen hr,
+main#titlescreen section {
+	margin:2px 0;
+	padding:0;
+}
+
+main#titlescreen hr {
+	height:3px;
+}
+
+main#titlescreen section#credit {}
+
+main#titlescreen section#notes ul {
+	margin:0;
+}
+
+main#titlescreen section#splash {
+	padding:0;
 	text-align:center;
 }
 
-.title {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/*	Some generic manipulation classes
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+	Some generic manipulation classes
 
 	Use these to easily rotate, flip, etc., images
 */

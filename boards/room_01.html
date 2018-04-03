@@ -10,134 +10,91 @@
 			/*	You may wish to relocate some of these to
 				'base.css' if they will be consistant /
 				mostly consistant throughout your game.
+				Anything placed here will override things
+				already set in 'base.css'
+				Have fun with it!
 			*/
 			a {
-				/*	Hyperlink colour */
-				color:white
+				color:white											/*	Hyperlink colour */
 			}
 			body {
-				/*	main bg colour */
-				background-color:lightgray;
-				/*	main bg image */
-				background-image:url("../images/background.jpg");
-				/*	main text colour */
-				color:blue;
+				background-color:lightgray;							/*	main bg colour */
+				background-image:url("../images/background.jpg");	/*	main bg image */
+				color:blue;											/*	main text colour */
 			}
-			iframe {
-				/*	message border style */
-				border:1px inset lightgray;
-			}
-			td {
-				/*	panel background colour */
-				background-color:lightgray;
-				/*	panel border style */
-				border:2px outset lightgray;
-			}
-			#board td {
-				/*	board cells bg colour */
-				background-color:lightgray;
-				/*	board cells bg image */
-				background-image:url("../images/floor.gif");
-				background-size:6em 6em;
-				/*	board cells border style */
-				border:1px inset lightgray;
+			section#view section#map section.cell {
+				background-color:lightgray;							/*	board cells bg colour */
+				background-image:url("../images/floor.gif");		/*	board cells bg image */
 			}
 		</style>
 	</head>
 	<body>
-		<table id="windows">
-			<tr>
-	<!--	SENSES / PERCEPTION WINDOW	------------------>
-				<td id="person" class="window">
-					<table>
-						<tr>
-							<td class="window heading">
-								<h2>perception</h2>
-							</td>
-						</tr>
-					</table>
-					<table id="sense">
-						<tr>
-							<td class="senses"><img src="../images/eye_01.gif"></td>
-							<td class="senses"><img src="../images/nose_01.gif"></td>
-							<td class="senses"><img src="../images/ear_01.gif"></td>
-							<td class="senses"><img src="../images/tongue_01.gif"></td>
-							<td class="senses"><img src="../images/hand_01.gif"></td>
-						</tr>
-						<tr>
-							<td class="sensed">MOUSE,<br>EXIT</td>
-							<td class="sensed">MUSK, OFFAL</td>
-							<td class="sensed">CHURNING</td>
-							<td class="sensed">WET</td>
-							<td class="sensed">. . .</td>
-						</tr>
-					</table>
-				</td>
-	<!--	GAME WINDOW	---------------------------------->
-				<td class="window" rowspan="2">
-					<table class="title">
-						<tr>
-							<td class="window heading">
-								<h1>example game</h1>
-							</td>
-						</tr>
-					</table>
-	<!--	GAME BOARD	-->
-					<table id="board">
-						<tr>
-							<td><img src="../images/wall.jpg"></td>
-							<td><img src="../images/wall.jpg"></td>
-							<td><img src="../images/wall.jpg"></td>
-							<td><img src="../images/wall.jpg"></td>
-							<td><img src="../images/wall.jpg"></td>
-						</tr>
-						<tr>
-							<td><img src="../images/wall.jpg"></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><img src="../images/wall.jpg"></td>
-						</tr>
-						<tr>
-							<td><img src="../images/wall.jpg"></td>
-							<td></td>
-							<td></td>
-							<td><a href="../messages/room_001_skates.html"><img src="../images/skates.png"></td>
-							<td><img src="../images/wall.jpg"></td>
-						</tr>
-						<tr>
-							<td><img src="../images/wall.jpg"></td>
-							<td class="align_right"><a target="message_frame" href="../messages/room_001_mouse.txt">Ҩ ̡⁐̤ᕐᐷ</a></td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="../images/wall.jpg"></td>
-							<td><img src="../images/wall.jpg"></td>
-							<td><img src="../images/wall.jpg"></td>
-							<td><img src="../images/wall.jpg"></td>
-							<td><img src="../images/wall.jpg"></td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-			<tr>
+		<main id="board">
+
+	<!--	VIEWPOINT WINDOW	---------------------------------->
+			<section id="view" class="window">
+				<h1>example game</h1>
+				<section id="map">
+				<!--	Row 1	-->
+				<!--	Columns ordered 1-5	-->
+					<section class="cell"><img src="../images/wall.jpg" alt="a damp stone wall"></section>
+					<section class="cell"><img src="../images/wall.jpg" alt="a damp stone wall"></section>
+					<section class="cell"><img src="../images/wall.jpg" alt="a damp stone wall"></section>
+					<section class="cell"><img src="../images/wall.jpg" alt="a damp stone wall"></section>
+					<section class="cell"><img src="../images/wall.jpg" alt="a damp stone wall"></section>
+				<!--	Row 2	-->
+					<section class="cell"><img src="../images/wall.jpg" alt="a damp stone wall"></section>
+					<section class="cell"></section>
+					<section class="cell"></section>
+					<section class="cell"></section>
+					<section class="cell"><img src="../images/wall.jpg" alt="a damp stone wall"></section>
+				<!--	Row 3	-->
+					<section class="cell"><img src="../images/wall.jpg" alt="a damp stone wall"></section>
+					<section class="cell"></section>
+					<section class="cell"></section>
+					<section class="cell"><a href="../messages/room_001_skates.html"><img src="../images/skates.png" alt="a brighly coloured hight-heeled roller-skate, with blurred laser-blue wheels and a decorative orange sparkle on the toe."></a></section>
+					<section class="cell"><img src="../images/wall.jpg" alt="a damp stone wall"></section>
+				<!--	Row 4	-->
+					<section class="cell"><img src="../images/wall.jpg" alt="a damp stone wall"></section>
+					<section class="cell align_right"><a target="message_frame" href="../messages/room_001_mouse.txt">Ҩ ̡⁐̤ᕐᐷ</a></section>
+					<section class="cell"></section>
+					<section class="cell"></section>
+					<section class="cell"></section>
+				<!--	Row 5	-->
+					<section class="cell"><img src="../images/wall.jpg" alt="a damp stone wall"></section>
+					<section class="cell"><img src="../images/wall.jpg" alt="a damp stone wall"></section>
+					<section class="cell"><img src="../images/wall.jpg" alt="a damp stone wall"></section>
+					<section class="cell"><img src="../images/wall.jpg" alt="a damp stone wall"></section>
+					<section class="cell"><img src="../images/wall.jpg" alt="a damp stone wall"></section>
+				</section>
+			</section>
+
+	<!--	PERCEPTION WINDOW	-------------------------->
+			<section id="perception" class="window">
+				<h2>perception</h2>
+				<section id="senses">
+				<!--	Icons for senses		-->
+					<section class="icon"><img src="../images/eye_01.gif" alt="a blinking, looking eye"></section>
+					<section class="icon"><img src="../images/nose_01.gif" alt="a smelling dog nose"></section>
+					<section class="icon"><img src="../images/ear_01.gif" alt="alistening ear"></section>
+					<section class="icon"><img src="../images/tongue_01.gif" alt="a tongue curling"></section>
+					<section class="icon"><img src="../images/hand_01.gif" alt="a gloved hand pointing"></section>
+				<!--	Descriptions for senses	-->
+					<section class="description">MOUSE,<br>EXIT</section>
+					<section class="description">MUSK, OFFAL</section>
+					<section class="description">CHURNING</section>
+					<section class="description">WET</section>
+					<section class="description">. . .</section>
+				</section>
+			</section>
+
 	<!--	MESSAGE WINDOW	------------------------------>
-				<td id="message" class="window">
-					<table>
-						<tr>
-							<td class="window heading">
-								<h2>message</h2>
-							</td>
-							<td class="window">
-								<a href="../messages/room_001.txt">&#8632;</a>
-							</td>
-						</tr>
-					</table>
-					<iframe name="message_frame" src="../messages/room_001.txt"></iframe>
-				</td>
-			</tr>
-		</table>
+			<section id="message" class="window">
+				<h2>message</h2>
+				<a href="../messages/room_001.txt">&#8632;</a>
+				<iframe name="message_frame" src="../messages/room_001.txt"></iframe>
+			</section>
+
+		</main>
 	</body>
 </html>
